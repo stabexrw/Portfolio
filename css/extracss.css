@@ -1,0 +1,31 @@
+.progressbar {
+    position: fixed;
+	height: 100px;
+    width: 10px;
+	bottom: 25px;
+    margin-left: 99%;
+    float: right;
+    background-color: rgba(255,255,255,.2);
+    z-index: 10;
+}
+
+.progressbar .line {
+	position: absolute;
+    width: 10px;
+	height: auto;
+    background-color: #00c0ff;
+}
+.progressbar .text {
+	position: absolute;
+    bottom: 100px;
+    left: 0px;
+    font-size: 13px;
+    transform: rotateZ(90deg);
+    text-transform: uppercase;
+    transform-origin: left;
+    white-space: nowrap;
+}
+.progressbar a {
+	text-decoration: none;
+	color: #fff;
+}
