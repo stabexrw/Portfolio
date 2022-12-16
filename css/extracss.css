@@ -29,3 +29,150 @@
 	text-decoration: none;
 	color: #fff;
 }
+
+.mobile_menu{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+.mobile_menu .mobile_menu_inner{
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #1e1345;
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	padding: 10px 20px 10px 20px;
+}
+.hamburger-inner, 
+.hamburger-inner:after, 
+.hamburger-inner:before{
+	background-color: #fff;
+}
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner:after, 
+.hamburger.is-active .hamburger-inner:before{
+	background-color: #fff;
+}
+.mobile_menu .mobile_in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.mobile_menu .mobile_in .logo img{
+	max-width: 120px;
+	max-height: 70px;
+}
+.mobile_menu .trigger{
+	line-height: 0;
+}
+.mobile_menu .dropdown{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #1e1345;
+	display: none;
+}
+.mobile_menu .dropdown .dropdown_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 25px 40px;
+}
+.mobile_menu .dropdown .dropdown_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.mobile_menu .dropdown .dropdown_inner ul li{
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.mobile_menu .dropdown .dropdown_inner ul li a{
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	padding: 0px 0px;
+	font-weight: 500;
+}
+.mobile_menu .hamburger-inner, 
+.mobile_menu .hamburger-inner:after, 
+.mobile_menu .hamburger-inner:before{
+	width: 30px;
+	height: 2px;
+}
+.mobile_menu .hamburger-box{
+	width: 30px;
+}
+.mobile_menu .hamburger{
+	padding: 0px;
+}
+
+
+@media (max-width: 768px) {
+
+	.header{display: none;}
+	.mobile_menu{display: block;}
+	.home .content{flex-direction: column-reverse;text-align: center;justify-content: center;}
+	.home .right{width: 100%;padding-left: 0px;margin-bottom: 30px;}
+	.home .right img{max-width: 200px;max-height: 200px;}
+	.home .left{width: 100%; margin: 0 auto;}
+	.home .name{font-size: 30px;margin-bottom: 8px;}
+	.home .job{font-size: 17px;}
+ 	.home .button { margin-left: 0px; }
+	.skills .list ul{margin-left: 0px;}
+	.skills .list ul li{width: 100%;padding-left: 0px;}
+	.skills .list ul li .list_inner{padding: 40px;}
+	.skills .list ul li .svg{width: 55px;height: 55px;margin-bottom: 25px;}
+	.skills .list ul li .title{margin-bottom: 18px;}
+	.section_header span{font-size: 17px;}
+	.about .section_header h3{font-size: 25px; width: 400px; margin-left: -39%;}
+	.about .right .list > ul > li{border: none;width: 100%; line-height: 0.9;}
+	.about .right .item:first-child{padding-bottom: 0px;}
+	.about .right .list > ul{padding-bottom: 0px;}
+	.about .wrapper{flex-direction: column;}
+	.about .left{width: 100%;margin-bottom: 60px;}
+	.about .right{width: 100%;padding-left: 0px;top: 0px;}
+	.about .experience{display: none;}
+	.about .innerimage img{display: none;}
+	.about .mainimage{float: left;}
+	.about {margin-bottom: 100px;}
+	.numbering .number_list ul {justify-content: space-between; margin-left: -26%;}
+	.numbering .number_list ul li{width: 50%;}
+	.numbering .number_list ul li h3{font-size: 45px;}
+	.numbering .number_list ul li .title{font-size: 16px;padding-left: 10px;line-height: 24px;}
+	.numbering .number_list ul li .list_inner{padding: 70px 90px 40px 90px;}
+
+	.service .list ul{margin: 0px;}
+	.service .list ul li{width: 100%;padding-left: 0px;}
+	.service .list ul li .icon .svg{width: 55px;height: 55px;}
+	.service .list ul li .icon{margin-bottom: 33px;}
+	.resume_list ul li .icon{width: 65px;height: 65px;}
+	.resume_list ul li .icon .svg{width: 30px;height: 30px;}
+	.resume_list ul:before{left: 32.5px;}
+	.resume_list ul li .list_inner{padding-left: 95px;}
+	.resume_list .resume_title h3{font-size: 22px;}
+	.foliox_tm_resume .title h3{font-size: 30px;}
+	.portfolio .portfolio_list ul{margin: 0px;}
+	.portfolio .portfolio_list ul li{width: 100%;padding-left: 0px;}
+	.testimonials .text p{font-size: 22px;}
+	.testimonials .icon .svg{width: 65px;height: 65px;}
+	.testimonials .detail h3{font-size: 21px;}
+    .contact { column-count: 1; }
+	.contact .input_list ul{margin: 0px;}
+	.contact .input_list ul li{width: 100%;padding-left: 0px;}
+	.contact .left .icon{width: 70px;height: 70px;}
+	.contact .left .short h3{font-size: 24px;margin-bottom: 1px;}
+	.contact input{font-size: 16px;}
+	.contact .message_area textarea{font-size: 16px;}
+}

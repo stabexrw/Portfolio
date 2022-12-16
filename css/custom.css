@@ -107,7 +107,6 @@ h1, h2, h3, h4, h5, h6{
   color: #fff;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  transition: all .3s ease;
 }
 .header .menu ul li a:hover{
   color:#00c0ff;
@@ -235,32 +234,32 @@ h1, h2, h3, h4, h5, h6{
   margin-top: 15vh;
 }
 
-.skills{
+.skills, .services{
   width: 100%;
   height: auto;
   float: left;
 }
-.skills , .about{
+.skills , .about, .services {
   margin-bottom: 110px;
 }
-.skills .list{
+.skills .list, .services .list {
   width: 100%;
   height: auto;
   float: left;
   position: relative;
 }
-.skills ul{
+.skills ul, .services ul{
   margin: 0px 0px 0px -1px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
-.skills .list ul li{
+.skills .list ul li, .services .list ul li{
   margin: 0px -20px 30px 0px;
   padding-left: 35px;
   width: 33.3333%;
 }
-.skills ul li .list_inner{
+.skills ul li .list_inner , .services ul li .list_inner{
   width: 90%;
   height: 100%;
   clear: both;
@@ -270,13 +269,14 @@ h1, h2, h3, h4, h5, h6{
   border-radius: 10px;
   padding: 60px;
 }
-.skills ul li .svg{
+.skills ul li img, .services ul li .img{
   width: 65px;
   height: 65px;
   margin-bottom: 30px;
   color: #00c0ff;
 }
-.skills ul li .title{
+.skills ul li .title, .services ul li .title {
+
   font-size: 20px;
   margin-bottom: 20px;
 }
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6{
   margin-top: 100px;
 
 }
-.about span, .languages span, .contact span , .testimonials span {
+.about span, .languages span, .contact span , .testimonials span, .services span, .resume span, .portfolio span {
   font-size: 21px;
   font-family: 'Poppins', sans-serif;
   color: #00c0ff;
@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6{
   display: inline-block;
   margin-bottom: 5px;
 }
-.about h3, .contact h3, .languages h3, .testimonials h3 {
+.about h3, .contact h3, .languages h3, .testimonials h3, .services h3, .portfolio h3 {
   font-size: 35px;
 }
 .about .wrapper{
@@ -490,8 +490,8 @@ h1, h2, h3, h4, h5, h6{
   display: inline-block;
   padding-left: 30px;
 }
-.languages .section_header, .contact .section_header, .testimonials .section_header {
-  margin-left: 20%;
+.languages .section_header, .contact .section_header, .testimonials .section_header, .services .section_header, .resume .section_header, .portfolio .section_header {
+  margin-left: 25%;
   width: 50%;
   align-content: center;
   text-align: center;
@@ -501,7 +501,7 @@ h1, h2, h3, h4, h5, h6{
   width: 100%;
   height: auto;
   float: left;
-  margin-bottom: 113px;
+  margin-bottom: 53px;
 }
 .languages .list{
   width: 100%;
@@ -544,8 +544,8 @@ h1, h2, h3, h4, h5, h6{
 .progress_inner span.number{
   float: right;
   right: 100%;
-  margin-right: 20px;
-  margin-top: -10px;
+  margin-right: 60px;
+  margin-top: -13px;
   color: #00c0ff;
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
@@ -553,7 +553,7 @@ h1, h2, h3, h4, h5, h6{
 .progress_inner .background{
   background:#ffffff;
   width:90%;
-  min-width:100%;
+  min-width:90%;
   position:relative;
   height:14px;
   border-radius: 50px;
@@ -757,18 +757,17 @@ h1, h2, h3, h4, h5, h6{
   height: auto;
   float: left;
   position: relative;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .testimonials .in{
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   text-align: center;
   margin: 0px auto;
 }
 .testimonials .total{
   width: 100%;
   height: auto;
-  clear: both;
   float: left;
   position: relative;
 }
@@ -780,9 +779,9 @@ h1, h2, h3, h4, h5, h6{
   margin: 0px;
 }
 .testimonials .icon{
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
-.testimonials .icon .svg{
+.testimonials .icon img{
   width: 80px;
   height: 80px;
   color: #00c0ff;
@@ -808,11 +807,13 @@ h1, h2, h3, h4, h5, h6{
   height: 60px;
   border-radius: 100%;
 }
-.testimonials .short .image .main{
+.testimonials .short .image img{
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
+  width: 60px;
+  height: 60px;
   right: 0px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -829,11 +830,17 @@ h1, h2, h3, h4, h5, h6{
 .testimonials .detail span{
   font-size: 16px;
 }
+.testimonials .owl-theme .owl-dots{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 30px;
+}
 .testimonials .owl-theme .owl-dots .owl-dot span{
   width: 15px;
   height: 15px;
-  background-color: var(--extra-color);
+  background-color: #00c0ff;
   position: relative;
+  border-radius: 50%;
   margin: 0px 12px;
 }
 .testimonials .owl-theme .owl-dots .owl-dot span:before{
@@ -846,12 +853,6 @@ h1, h2, h3, h4, h5, h6{
   border-radius: 100%;
   border: 2px solid #fff;
   z-index: -1;
-  
-  -webkit-transition: all .5s ease;
-     -moz-transition: all .5s ease;
-      -ms-transition: all .5s ease;
-       -o-transition: all .5s ease;
-          transition: all .5s ease;
 }
 .testimonials .owl-theme .owl-dots .owl-dot.active span:before{
   top: -5px;
@@ -865,4 +866,198 @@ h1, h2, h3, h4, h5, h6{
   left: -5px;
   right: -5px;
   margin-top: 64px;
+}
+.resume .wrapper{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 65px;
+}
+.resume .left{
+  width: 50%;
+  padding-right: 50px;
+}
+.resume .right{
+  width: 50%;
+  padding-left: 50px;
+}
+.resume .title{
+  width: 100%;
+  float: left;
+  margin-bottom: 60px;
+}
+.resume .title h3{
+  margin-left: 70px;
+  font-size: 36px;
+}
+.resume_list{
+  width: 100%;
+  float: left;
+}
+.resume_list ul{
+  margin: 0px;
+  list-style-type: none;
+  position: relative;
+  float: left;
+}
+.resume_list ul:before{
+  position: absolute;
+  content: "";
+  top: 10px;
+  bottom: 0px;
+  left: 75px;
+  width: 1px;
+  background-color: #5d5e82;
+}
+.resume_list ul li{
+  margin: 0px 0px 50px 0px;
+  width: 100%;
+  float: left;
+}
+.resume_list ul li:last-child{
+  margin-bottom: 0px;
+}
+.resume_list ul li .list_inner{
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+  padding-left: 107px;
+}
+.resume_list ul li .icon{
+  width: 72px;
+  height: 72px;
+  display: inline-block;
+  border-radius: 100%;
+  background-color: #00c0ff;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+.resume_list ul li .icon img{
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+}
+.resume_list .resume_title{
+  width: 100%;
+  float: left;
+  margin-bottom: 18px;
+}
+.resume_list .resume_title h3{
+  font-size: 24px;
+  margin-bottom: 13px;
+}
+.resume_list .resume_title h3 span{
+  font-size: 16px;
+  color: #b4afc6;
+  font-weight: 400;
+  display: inline-block;
+  padding-left: 8px;
+}
+.resume_list .company{
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+}
+.portfolio .portfolio_filter{
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 55px;
+}
+.portfolio .portfolio_filter ul{
+  margin: 0px;
+}
+.portfolio .portfolio_filter ul li{
+  margin: 0px 35px 0px 0px;
+  display: inline-block;
+}
+.portfolio .portfolio_filter ul li:last-child{
+  margin-right: 0px;
+}
+.portfolio .portfolio_filter ul li a{
+  color: #fff;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 500;
+  transition: all .3s ease;
+  text-decoration: none;
+}
+.portfolio .portfolio_filter ul li a.current{
+  color: #00c0ff;
+}
+.portfolio .portfolio_filter ul li a:hover{
+  color: #00c0ff;
+}
+.portfolio .portfolio_list{
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.portfolio .portfolio_list ul{
+  margin: 0px 0px 0px -13px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .portfolio_list ul li{
+  margin: 0px 0px 13px 0px;
+  padding-left: 13px;
+  width: 33.3333%;
+}
+.portfolio .portfolio_list ul li .list_inner{
+  width: 100%;
+  height: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .portfolio_list ul li .image{
+  position: relative;
+}
+
+.portfolio .portfolio_list ul li .image img{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+.portfolio .portfolio_list ul li .details{
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #1e1345;
+  padding: 20px;
+  border-radius: 12px;
+  transform: translateY(125%);
+  transition: all .3s ease;
+}
+.portfolio .portfolio_list ul li .details h3{
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+.portfolio .portfolio_list ul li .details span{
+  font-size: 16px;
+}
+.portfolio .portfolio_list ul li .list_inner:hover .details{
+  transform: translateY(0);
 }

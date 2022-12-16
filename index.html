@@ -5,14 +5,42 @@
         <title>Shema T Patrick</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/carousel.css" />
+        <link rel="stylesheet" type="text/css" href="css/menusplugin.css" />
         <link rel="stylesheet" type="text/css" href="css/custom.css" />
         <link rel="stylesheet" type="text/css" href="css/extracss.css" />
     </head>
     <body>
         <div class="maindiv">
-            <div class="cursor cursor-outside"></div>
-            <div class="cursor cursor-inside"></div>
-        <div class="header">
+        <div class="mobile_menu">
+            <div class="mobile_menu_inner">
+                <div class="mobile_in">
+                    <div class="logo">
+                            <a href="#"><img src="images/logo.png" alt="" /></a>
+                    </div>
+                    <div class="trigger">
+                        <div class="hamburger hamburger--slider">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown_inner">
+                    <ul class="anchor_nav">
+                        <li class="current"><a href="#home">Home</a></li>
+                        <li><a href="#about"> About </a> </li>
+                        <li><a href="#service"> Service</a></li>
+                        <li><a href="#portfolio"> Portfolio</a></li>
+                        <li><a href="#testimonials"> testimonials</a></li>
+                        <li><a href="#contact"> Contact</a></li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+        <div class="header"> 
             <div class="container">
                 <div class="inner">
                 <div class="logo">
@@ -25,7 +53,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#service">Service</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#testimony">Testimonials</a></li>
+                        <li><a href="#testimonials">testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -89,7 +117,8 @@
             </div>
           </div>
          </div>
-         <div class="section about">
+         <div class="section" id="about">
+            <div class="about">
             <div class="container ">
                 <div class="section_header">
                     <span>About Me</span>
@@ -155,6 +184,7 @@
                     </div>
                 </div>
             </div>
+            </div>
          </div>
          <div class="section">
             <div class="numbering">
@@ -168,7 +198,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="list_inner tilt-effect">
+                                <div class="list_inner ">
                                     <h3><span>20+</span></h3>
                                     <span class="title">Direct Clients</span>
                                 </div>
@@ -190,7 +220,7 @@
                 </div>
             </div>
          </div>
-          <div class="section">
+          <div class="section" >
              <div class="languages">
                 <div class="container">
                     <div class="section_header">
@@ -212,7 +242,7 @@
                                 <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
                             </div>
                             <div class="progress_inner" data-value="70">
-                                <span><span class="label">React</span><span class="number">70%</span></span>
+                                <span><span class="label">Java</span><span class="number">70%</span></span>
                                 <div class="background"><div class="bar"><div class="bar_in"></div></div></div>
                             </div>
                             <div class="progress_inner" data-value="80">
@@ -227,8 +257,212 @@
                     </div>
                 </div>
             </div>
+            </div>
+            <div class="section" id="service">
+            <div class="services">
+                <div class="container">
+                    <div class="section_header">
+                        <span>Services</span>
+                        <h3>What I Do for My Clients</h3>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                            <div class="list_inner ">
+                                <span class="icon"><img class="svg" src="img/svg/monitor.svg" alt="" /></span>
+                                    <h3 class="title">Website Design</h3>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor</p>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="list_inner ">
+                                    <span class="icon"><img class="svg" src="img/svg/anchor.svg" alt="" /></span>
+                                    <h3 class="title">Graphic Design</h3>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor</p>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="list_inner ">
+                                    <span class="icon"><img class="svg" src="img/svg/bar.svg" alt="" /></span>
+                                    <h3 class="title">Digital Marketing</h3>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor</p>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="list_inner ">
+                                    <span class="icon"><img class="svg" src="img/svg/aim.svg" alt="" /></span>
+                                    <h3 class="title">Photography</h3>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor</p>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="list_inner ">
+                                    <span class="icon"><img class="svg" src="img/svg/avatar.svg" alt="" /></span>
+                                    <h3 class="title">Consultancy</h3>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor</p>
+                                </div>
+                            </li>
+                            <li >
+                                <div class="list_inner ">
+                                    <span class="icon"><img class="svg" src="img/svg/code.svg" alt="" /></span>
+                                    <h3 class="title">Web Development</h3>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur adipi ctetur adipisicing eod tempor</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
          </div>
          <div class="section">
+            <div class="resume">
+                <div class="container">
+                    <div class="section_header">
+                        <span>Resume</span>
+                    </div>
+                <div class="wrapper">
+                    <div class="left">
+                        <div class="title">
+                            <h3>Experience</h3>
+                        </div>
+                        <div class="resume_list">
+                            <ul>
+                            <li>
+                                <div class="list_inner">
+                                    <span class="icon"><img  src="icon/svg/case-svgrepo-com.svg" alt="" /></span>
+                                    <div class="resume_title">
+                                        <h3>UI/UX Designer <span>(2018 - Present)</span></h3>
+                                        <span class="company">Easy Computers</span>
+                                    </div>
+                                        <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur khobor nio na.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list_inner">
+                                    <span class="icon"><img src="icon/svg/case-svgrepo-com.svg" alt="" /></span>
+                                    <div class="resume_title">
+                                         <h3>Web Designer <span>(2016 - 2018)</span></h3>
+                                         <span class="company">Design Hub</span>
+                                    </div>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur khobor nio na.</p>
+                                 </div>
+                            </li>
+                            <li>
+                                <div class="list_inner">
+                                    <span class="icon"><img  src="icon/svg/case-svgrepo-com.svg" alt="" /></span>
+                                    <div class="resume_title">
+                                        <h3>Graphic Designer <span>(2012 - 2016)</span></h3>
+                                        <span class="company">Vivaco Studio</span>
+                                    </div>
+                                    <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur khobor nio na.</p>
+                                </div>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title">
+                            <h3>Education</h3>
+                        </div>
+                        <div class="resume_list">
+                            <ul>
+                                <li>
+                                    <div class="list_inner">
+                                        <span class="icon"><img class="svg" src="icon/svg/graduation-hat-svgrepo-com.svg" alt="" /></span>
+                                        <div class="resume_title">
+                                            <h3>Masters of Science <span>(2010 - 2012)</span></h3>
+                                            <span class="company">Dhaka University</span>
+                                        </div>
+                                        <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur khobor nio na.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list_inner">
+                                            <span class="icon"><img  src="icon/svg/graduation-hat-svgrepo-com.svg" alt="" /></span>
+                                        <div class="resume_title">
+                                            <h3>Bacheloor of Science <span>(2006 - 2010)</span></h3>
+                                            <span class="company">Bangla Collage</span>
+                                        </div>
+                                            <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur khobor nio na.</p>
+                                    </div>
+                                </li>
+                                <li >
+                                    <div class="list_inner">
+                                        <span class="icon"><img class="svg" src="icon/svg/graduation-hat-svgrepo-com.svg" alt="" /></span>
+                                        <div class="resume_title">
+                                            <h3>Secondary School <span>(2000 - 2006)</span></h3>
+                                            <span class="company">Vivaco Studio</span>
+                                        </div>
+                                            <p class="data">Kobita tumi sopno charini hoye ersest labo met, consectetur khobor nio na.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                         </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+          <div class="section" id="portfolio">
+            <div class="portfolio">
+                <div class="container">
+                    <div class="section_header">
+                        <span>Portfolio</span>
+                        <h3>What I Do for My Clients</h3>
+                    </div>
+                    <div class="portfolio_filter">
+                    <ul>
+                        <li><a href="#" class="current" data-filter="*">All</a></li>
+                        <li><a href="#" data-filter=".website">Website</a></li>
+                        <li><a href="#" data-filter=".mobile">Mobile App</a></li>
+                        <li><a href="#" data-filter=".desktop">Desktop App</a></li>
+                    </ul>
+                    </div>
+                    <div class="portfolio_list wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <ul class="gallery_zoom">
+                            <li class="website">
+                                <div class="list_inner tilt-effect">
+                                    <div class="image">
+                                        <img class="main" src="images/1.jpg"/>
+                                    </div>
+                                    <div class="details">
+                                        <h3>creators</h3>
+                                        <span>website</span>
+                                    </div>
+                                <a class=" popup-website" ></a>
+                                </div>
+                            </li>
+                            <li class="mobile">
+                                <div class="list_inner ">
+                                    <div class="image">
+                                        <img  src="images/1.jpg"/>
+                                    </div>
+                                    <div class="details">
+                                        <h3>Mobile dev</h3>
+                                        <span>Mobile App</span>
+                                    </div>
+                                    <a class=" popup-mobile"></a>
+                                </div>
+                            </li>
+                            <li class="desktop">
+                                <div class="list_inner ">
+                                    <div class="image">
+                                        <img class="main" src="images/1.jpg"/>
+                                    </div>
+                                    <div class="details">
+                                        <h3>SBEMS</h3>
+                                        <span>Soundcloud</span>
+                                    </div>
+                                <a class=" popup-desktop"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+         </div>
+         
+         <div class="section" id="testimonials">
             <div class="testimonials">
                 <div class="container">
                     <div class="section_header">
@@ -248,7 +482,7 @@
                                         </div>
                                         <div class="short">
                                             <div class="image">
-                                                 <div class="main" data-img-url="img/testimonials/2.jpg"></div>
+                                                <img  src="images/typing.jpg"/>
                                             </div>
                                             <div class="detail">
                                                  <h3>Mike Anderson</h3>
@@ -265,7 +499,7 @@
                                         </div>
                                         <div class="short">
                                             <div class="image">
-                                                <div class="main" data-img-url="img/testimonials/3.jpg"></div>
+                                                <img  src="images/avatar.png"/>
                                             </div>
                                             <div class="detail">
                                                     <h3>Alan Walker</h3>
@@ -359,19 +593,20 @@
                         </div>
                         <div class="fields">
                             <form action="/" method="post" class="contact_form" id="contact_form" >
-                                <span class="returnmessage" data-success="Your message has been received, We will contact you soon."></span>
-                                <div class="empty_notice"><span>Please Fill Required Fields</span></div>
+                                
                                 <div class="input_list">
-                                    <input id="name" type="text" placeholder="Your Name" />
-                                    <input id="email" type="text" placeholder="Your Email" />
-                                    <input id="phone" type="number" placeholder="Your Phone" />
-                                    <input id="subject" type="text" placeholder="Subject" />
+                                    <span class="returnmessage" style="display:none; color: red; font-size:10px ;">Your message has been received, We will contact you soon.</span>
+                                <div class="empty_notice"   id="empty_notice"><span style="display:none; color: red; font-size:10px">Please Fill Required Fields</span></div>
+                                    <input id="name" name="name" onkeyup="CheckName()" type="text" placeholder="Your Name" />
+                                    <input id="email" name="email" onkeyup="CheckEmail()" type="text" placeholder="Your Email" />
+                                    <input id="phone" name="phone" onkeyup="CheckPhone()" type="number" placeholder="Your Phone" />
+                                    <input id="subject" type="text"  placeholder="Subject" />
                                 </div>
                                 <div class="message_area">
                                     <textarea id="message" placeholder="Write your message here"></textarea>
                                 </div>
                                 <div class="button">
-                                    <a id="submit" href="#"><span>Submit Now</span></a>
+                                    <a href="JavaScript:void(0)" onclick="Submit()"><span>Submit Now</span></a>
                                 </div>
                             </form>
                         </div>
@@ -391,4 +626,9 @@
         </div>
       </div>
    </body>
+    <script src="js/jquery.js"></script>
+    <script src="js/externaljs.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/custom.js"></script>
+
 </html>
