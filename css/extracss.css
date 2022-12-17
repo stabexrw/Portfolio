@@ -120,9 +120,12 @@
 
 
 @media (max-width: 768px) {
-
+    .section{ margin-left: 0%; width: 100%;float: left; align-items:flex-start ; }
 	.header{display: none;}
+	.container {margin-left: 0px;}
 	.mobile_menu{display: block;}
+	.skills , .about, .services { margin-bottom: 20px;}
+ 
 	.home .content{flex-direction: column-reverse;text-align: center;justify-content: center;}
 	.home .right{width: 100%;padding-left: 0px;margin-bottom: 30px;}
 	.home .right img{max-width: 200px;max-height: 200px;}
@@ -130,13 +133,13 @@
 	.home .name{font-size: 30px;margin-bottom: 8px;}
 	.home .job{font-size: 17px;}
  	.home .button { margin-left: 0px; }
-	.skills .list ul{margin-left: 0px;}
-	.skills .list ul li{width: 100%;padding-left: 0px;}
-	.skills .list ul li .list_inner{padding: 40px;}
-	.skills .list ul li .svg{width: 55px;height: 55px;margin-bottom: 25px;}
-	.skills .list ul li .title{margin-bottom: 18px;}
+	.skills .list ul, .services .list .ul {margin-left: 0px;}
+	.skills .list ul li, .services .list ul li {width: 100%;padding-left: 0px;}
+	.skills .list ul li .list_inner, .services .list ul li .list_inner{padding: 40px;}
+	.skills .list ul li img, .services .list ul li .img{width: 55px;height: 55px;margin-bottom: 25px;}
+	.skills .list ul li .title, .services .list ul li .title{margin-bottom: 18px;}
 	.section_header span{font-size: 17px;}
-	.about .section_header h3{font-size: 25px; width: 400px; margin-left: -39%;}
+	.about .section_header h3, .portfolio .section_header h3, .contact .section_header h3{font-size: 25px; width: 400px; margin-left: -49%;}
 	.about .right .list > ul > li{border: none;width: 100%; line-height: 0.9;}
 	.about .right .item:first-child{padding-bottom: 0px;}
 	.about .right .list > ul{padding-bottom: 0px;}
@@ -147,32 +150,86 @@
 	.about .innerimage img{display: none;}
 	.about .mainimage{float: left;}
 	.about {margin-bottom: 100px;}
+	.languages .section_header h3,.services .section_header h3{font-size: 25px; width: 400px; margin-left: -49%;}
+	.progress {column-count: 1; width: 100%;}
 	.numbering .number_list ul {justify-content: space-between; margin-left: -26%;}
-	.numbering .number_list ul li{width: 50%;}
+	.numbering .number_list ul li{width: 50%; margin-bottom: -30px;}
 	.numbering .number_list ul li h3{font-size: 45px;}
 	.numbering .number_list ul li .title{font-size: 16px;padding-left: 10px;line-height: 24px;}
 	.numbering .number_list ul li .list_inner{padding: 70px 90px 40px 90px;}
-
-	.service .list ul{margin: 0px;}
-	.service .list ul li{width: 100%;padding-left: 0px;}
-	.service .list ul li .icon .svg{width: 55px;height: 55px;}
-	.service .list ul li .icon{margin-bottom: 33px;}
+	.resume .wrapper { display: block;margin-top: 10px ; }
+	.resume .left, .resume .right  {width: 100%; padding-left: 0px; margin-left: 0%;}
 	.resume_list ul li .icon{width: 65px;height: 65px;}
 	.resume_list ul li .icon .svg{width: 30px;height: 30px;}
 	.resume_list ul:before{left: 32.5px;}
 	.resume_list ul li .list_inner{padding-left: 95px;}
 	.resume_list .resume_title h3{font-size: 22px;}
-	.foliox_tm_resume .title h3{font-size: 30px;}
+	.resume .title h3{font-size: 30px;}
 	.portfolio .portfolio_list ul{margin: 0px;}
 	.portfolio .portfolio_list ul li{width: 100%;padding-left: 0px;}
-	.testimonials .text p{font-size: 22px;}
-	.testimonials .icon .svg{width: 65px;height: 65px;}
+	.testimonials {width: 100%;}
+	.testimonials .in {width: 100%; max-width: 900px;}
+	.testimonials .data p{font-size: 22px; width: 100%;}
+	.testimonials .icon  img{width: 65px;height: 65px;}
 	.testimonials .detail h3{font-size: 21px;}
-    .contact { column-count: 1; }
-	.contact .input_list ul{margin: 0px;}
+    .contact .contact_inner{ display: block; }
+	.contact .left {width: 100%;}
+	.contact .right{ width: 100%; }
+    .contact .inner .icon{width: 66px;height: 66px;}
+    .contact .inner .icon img{width: 36px;height: 36px;}
+    .contact .inner{ column-count: 1; width: 100%;}
+	.contact .input_list ul{margin: 0px; width: 100%;}
 	.contact .input_list ul li{width: 100%;padding-left: 0px;}
 	.contact .left .icon{width: 70px;height: 70px;}
+    .contact .right .input_list input { width: 100%;}
 	.contact .left .short h3{font-size: 24px;margin-bottom: 1px;}
 	.contact input{font-size: 16px;}
+	.contact .fields form .button {margin-left: -10%;}
 	.contact .message_area textarea{font-size: 16px;}
+	.progressbar { margin-left: 95%; }
+	.resume_list ul:before {left: 72px;}
+
+     }
+@media only screen and (min-width: 45em) {
+  
+  .modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+   
+  } 
+  .modal-overlay .active {
+      opacity: 1;
+      visibility: visible;
+    }
 }
+@media only screen and (max-width: 44.9375em) {
+	 
+	 .modal {
+		 position: fixed;
+		 top: 0;
+		 left: 0;
+		 width: 100%;
+		 height: 100%;
+		 -webkit-overflow-scrolling: touch;
+		 border-radius: 0;
+		 transform: scale(1.1);
+		 padding: 0 !important;
+	}
+	 .close-modal {
+		 right: 20px !important;
+	}
+}
+

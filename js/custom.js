@@ -1,8 +1,5 @@
 
 
-
-
-
 function CheckName(){
   var name= document.getElementById('name');
    if(name.value=='' || name.value.length < 2){
@@ -46,12 +43,12 @@ function Submit(){
    	document.getElementById('empty_notice').style="display:block; color:red";
    	return false;
    }
-   else if(name.value='' || name.value.length<2){
+   else if(name.value=='' || name.value.length<2){
    	document.getElementById('empty_notice').innerHTML="<span>Please check name lenght</span>";
    	document.getElementsByClassName('returnmessage').style="display:none; ";
    	document.getElementById('empty_notice').style="display:block";
    	return false;
-   }else if(email.value=''){
+   }else if(email.value==''){
    	document.getElementById('empty_notice').innerHTML="<span>Please check email</span>";
    	document.getElementById('empty_notice').style="display:block";
    	document.getElementsByClassName('returnmessage').style="display:none; ";
@@ -63,8 +60,9 @@ function Submit(){
    	document.getElementsByClassName('returnmessage').style="display:none; ";
    }else{
    	document.getElementById('empty_notice').style="display:none";
-   	document.getElementsByClassName('returnmessage').style="display:block; color:green;";
-     
+   	document.getElementById('returnmessage').innerHTML="<span>your message has been received please check your inbox for our confirmation email</span>";
+   	document.getElementById('returnmessage').style="display:block; color:green;";
+   	 
    }
    
 }
@@ -275,14 +273,13 @@ function topslider(){
 }
 
 
-// jQuery('.anchor_nav').onePageNav();
+jQuery('.anchor_nav').onePageNav();
 
 function down(){
 	
 	"use strict";
 	
 	var topbar	= jQuery('.header').outerHeight();
-	var topbar	= jQuery('.mobile_menu').outerHeight();
 	
 	jQuery('.anchor').on('click',function(){
 		
@@ -325,3 +322,22 @@ function portfolio(){
 		}
 	}
 }
+var modal = document.querySelector(".modal");
+var triggers = document.querySelectorAll(".viewmodal");
+var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+  modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+  if (event.target === modal) {
+    toggleModal();
+  }
+}
+
+for (var i = 0, len = triggers.length; i < len; i++) {
+  triggers[i].addEventListener("click", toggleModal);
+}
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);

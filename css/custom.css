@@ -576,24 +576,26 @@ h1, h2, h3, h4, h5, h6{
   width: 100%;
   display: flex;
   margin-bottom: 132px;
-  position: relative;
 }
 .contact .inner {
-  column-count: 2;
-  width: 100%;
+  
+  position: relative;
 }
+.contact  .left  {width: 50%; float: left;
+  display: flex;}
 .contact .inner ul{
   float: left;
   list-style-type: none;
 
 }
-.contact .inner ul li{
+.contact  .right{width: 50%; float: left;}
+.contact .left .inner ul li{
   margin: 0px 0px 15px 0px;
 }
-.contact .inner ul li:last-child{
+.contact .left .inner ul li:last-child{
   margin-bottom: 0px;
 }
-.contact .inner .list_inner{
+.contact .left .inner .list_inner{
   display: flex;
   align-items: center;
 }
@@ -604,7 +606,7 @@ h1, h2, h3, h4, h5, h6{
   position: relative;
   background-color: #00c0ff;
 }
-.contact .inner .icon img{
+.contact .left .inner .icon img{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -613,42 +615,46 @@ h1, h2, h3, h4, h5, h6{
   transform: translate(-50%,-50%);
   font-size: 24px;
 }
-.contact .inner .short{
+.contact .left .inner .short{
   padding-left: 20px;
   text-align: left;
 }
-.contact .inner .short h3{
+.contact .left .inner .short h3{
   font-size: 30px;
   margin-bottom: 5px;
 
 }
-.contact .inner .short span{
+.contact .left .inner .short span{
   font-size: 19px;
   color: #b4afc6;
 }
-.contact .inner .short a{
+.contact .left .inner .short a{
   text-decoration: none;
   color: #b4afc6;
 }
-.contact .inner .short a:hover{
+.contact .left .inner .short a:hover{
   color: #00c0ff;
 }
-.contact .fields{
+.contact .right .fields{
   width: 100%;
   height: auto;
   float: left;
 }
-.contact .input_list{
+.contact .right  .input_list{
   width: 100%;
   height: auto;
-  clear: both;
   float: left;
 }
-.contact .input_list {
+.contact .right .input_list .messages{
+  width: 48%;
+  margin: 0px 11px 12px 0px;
+  float: left;
+}
+.contact .right .input_list {
   margin: 0px 0px 0px 0px;
   list-style-type: none;
 }
-.contact .input_list input {
+.contact .right .input_list input {
   margin: 0px 11px 12px 0px;
   width: 48%;
   float: left;
@@ -690,22 +696,31 @@ h1, h2, h3, h4, h5, h6{
   border-color: rgba(255,255,255,.5);
 }
 .contact .empty_notice{
-  color: #F52225;
+  color: red;
   margin-bottom: 7px;
   display: none;
+  font-size: 13px;
   text-align: left;
-  font-weight: 500;
+  font-weight: 100;
 }
-.contact .contact_error{
-  color: #F52225;
-  text-align: left;
-  font-weight: 500;
+.contact .empty_notice span{
+  margin-top: -20%;
+  color: red;
+  font-size: 13px;
 }
 .contact .returnmessage{
-  color:#3A00FF;
+  color:green;
   margin-bottom: 7px;
-  text-align: left;
-  font-weight: 500;
+  text-align: right;
+  font-weight: 100;
+}
+.contact .returnmessage span{ 
+ color: green;
+ font-size: 13px;
+}
+
+.contact .button {
+  margin-left: 3%;
 }
 .copyright{
   width: 100%;
@@ -786,10 +801,10 @@ h1, h2, h3, h4, h5, h6{
   height: 80px;
   color: #00c0ff;
 }
-.testimonials .text{
+.testimonials .data{
   margin-bottom: 60px;
 }
-.testimonials .text p{
+.testimonials .data p{
   font-size: 25px;
   font-style: italic;
   line-height: 1.6;
@@ -1002,7 +1017,6 @@ h1, h2, h3, h4, h5, h6{
 .portfolio .portfolio_list{
   width: 100%;
   height: auto;
-  clear: both;
   float: left;
 }
 .portfolio .portfolio_list ul{
@@ -1025,7 +1039,10 @@ h1, h2, h3, h4, h5, h6{
   overflow: hidden;
 }
 .portfolio .portfolio_list ul li .image{
+  width: 96%;
   position: relative;
+  height: 300px;
+  border-radius: 12px;
 }
 
 .portfolio .portfolio_list ul li .image img{
@@ -1034,9 +1051,8 @@ h1, h2, h3, h4, h5, h6{
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
 }
 .portfolio .portfolio_list ul li .details{
@@ -1060,4 +1076,51 @@ h1, h2, h3, h4, h5, h6{
 }
 .portfolio .portfolio_list ul li .list_inner:hover .details{
   transform: translateY(0);
+}
+
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  z-index: 10;
+  transition: visibility 0s linear 0.25s, opacity 0.89s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: white;
+  padding: 2rem 2.5rem;
+  width: 80em;
+  border-radius: 0.5rem;
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0 .2em .15em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: #ddd;
+  color: #333;
+  transition: color 0.12s ease-in-out;
+}
+.close-button:hover {
+  color: #d75b4c;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
